@@ -1,0 +1,12 @@
+{
+    "name": "Katie",
+    "age": 30,
+    "city": "Seattle, WA",
+    "interests": [
+        "Shopping",
+        "Watching horror movies",
+        "Watching Kdramas",
+        "Watching Anime"
+    ],
+    "is_student": true
+}
