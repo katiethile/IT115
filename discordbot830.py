@@ -35,10 +35,14 @@ async def on_message(message):
 		if user_message.lower() == "hello there" or user_message.lower() == "hello there": 
 			await message.channel.send(f'Sooner! {username} Thanks for logging in') 
 			return
-		elif user_message.lower() == "until another time": 
+		elif user_message.lower() == "goodbye": 
 			await message.channel.send(f'Goodbye! {username} Until the next time you log in!') 
-		elif user_message.lower() == "you're still here?": 
-			await message.channel.send("Why are you still here?") 
+		elif user_message.lower() == "tell me about my server": 
+			#This message would tell you your region, instance ID and IP Address.
+			await message.channel.send(f'EC2 Region: {ec2_metadata.region}\nEC2 Instance ID: {ec2_metadata.instance_id}\nIP Address: {ec2_metadata.public_ipv4}') 
+			#This else statement happens when all the other if else conditions are not met
+		else:
+			await message.channel.send(f"I apologize, I cannot comprehend what you said")
 
 
 
